@@ -19,11 +19,11 @@ public class Sorting {
 
     //Это ваш метод
     public int[] getLargest(int[] array, int k){
-        recQuickSort(0,array.length-1,array);
+        quickSort(0,array.length-1,array);
         return getMaxElements(k, array);
     }
 
-    private void recQuickSort(int left, int right,int[] theArray){
+    private void quickSort(int left, int right, int[] theArray){
         int size = right - left + 1;
 
         if(size<=3){
@@ -31,8 +31,8 @@ public class Sorting {
         }else{
             int median = median(left, right, theArray);
             int partition = partitionIt(left, right, median, theArray);
-            recQuickSort(left, partition - 1, theArray);
-            recQuickSort(partition + 1, right, theArray);
+            quickSort(left, partition - 1, theArray);
+            quickSort(partition + 1, right, theArray);
         }
     }
 
