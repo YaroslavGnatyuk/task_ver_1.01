@@ -5,11 +5,11 @@ import java.util.Random;
 /**
  * Created by yroslav on 10/21/16.
  */
-public class Sorting {
+public class SearchingMaxElements {
 
     @Test/*(expected = NullPointerException.class)*/
     public void showResult(){
-        int[] unsortedArray = new Random().ints(300, 0, 100).toArray();
+        int[] unsortedArray = new Random().ints(300000, 0, 100).toArray();
         int[] result = getLargest(unsortedArray, 10);
 
         for (int i = 0; i < result.length; i++) {
